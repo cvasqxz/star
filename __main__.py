@@ -8,8 +8,23 @@ if __name__ == '__main__':
 	while True:
 		for i in estrella:
 			i.on()
-			sleep(1)
+			sleep(0.05)
 
 		for i in estrella:
 			i.off()
-			sleep(1)
+			sleep(0.05)
+
+		for i in range(100):
+			for j in estrella:
+				j.value = i/100.0
+			sleep(0.01)
+
+		for i in range(100):
+			for j in estrella:
+				j.value = (100-i)/100.0
+			sleep(0.01)
+
+		for i in estrella:
+			i.off()
+
+		sleep(0.05)
